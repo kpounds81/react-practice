@@ -1,0 +1,37 @@
+Create a component that contains four sequential/relational dropdown menus
+(Year -> Make -> Model -> Engine) => YMME
+See visual reference for specifications
+*** Simplified YMME data ***
+yearData: [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014]
+makeData: ['Acura', 'Alfa Romeo', 'Audi', 'Autocar', 'Blue Bird', 'BMW']
+modelData: [
+    ['ILX', 'MDX', 'MDX-SH-AWD', 'MDX-Sport-Hybrid', 'NSX', 'RDX-2WD', 'RDX-AWD'], // Acura
+    ['4C Spider', 'Giulia', 'Giulia Quadrifoglio', 'Giulia Sport', 'Giulia TI', 'Stelvio', 'Stelvio Quadrifoglio'], // AlfaRomeo
+    ['A3 Premium', 'A3 Premium Plus', 'A3 Premium Plus Quattro', 'A3 Premium Quattro', 'A3 Prestige', 'A3 Premium Quattro'], // Audi
+    ['Xpeditor', 'Xpert', 'Xspotter Off Road', 'Xspotter On Road'], // Autocar
+    ['All American FE AAC2810-3006', 'All American FE AAC3401-3502', 'All American FE AAC3707-3808', 'All American FE AAC3904-4100'], // Blue Bird
+    ['230i', '230i xDrive', '330i', '330i GT xDrive', '330i xDrive', '340i GT xDrive', '430i'] // BMW
+]
+engineData: [
+    ['2.4L DI DOHC I-VTEC 4CYL'], // Acura
+    ['1.7L DI TURBO DOHC 4CYL'], // AlfaRomeo
+    ['2.0L FI TURBO DOHC 4CYL'], // Audi
+    ['11.9 NATURAL GAS 6CYL', '11.9 TURBO DIESEL 6CYL', '8.9L MFI TURBO DSL 6CYL'], // Autocar
+    ['6.7L FI TURBO DIESEL 6CYL'], // Blue Bird
+    ['2.0L TWIN TURBO DOHC 4CYL'] // BMW
+]
+Requirements
+- The four dropdown menus should be grouped horizontally with the following placeholder text: '1 | Year', '2 | Make', '3 | Model', '4 | Engine'
+- On first view, the Make, Model, and Engine dropdowns should be disabled
+- After the user selects the Year, then the Make dropdown should be enabled, (the Model and Engine dropdowns should be disabled)
+- After the user selects the Make, then the Model dropdown should be enabled, (the Engine dropdown should be disabled)
+- After the user selects the Model, if there is more than one engine available for the Year/Make/Model, then the Engine dropdown should be enabled, 
+- Otherwise assume that the only engine available is selected, select it for the user and submit the form
+- After the user selecte the Engine, then submit the form
+- Simulate submitting the form via console.log:
+    YMME: {
+        year: '2019',
+        make: 'Audi',
+        model: 'A3 Premium',
+        engine: '2.0L FI TURBO DOHC 4CYL'
+    }
