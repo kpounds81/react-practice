@@ -28,6 +28,7 @@ function App() {
         <select
           id="make"
           onChange={(e) => setMakeValue(e.target.value)}
+          disabled={yearValue === ''}
           value={makeValue}
         >
           <option value="">2 | Make</option>
@@ -38,7 +39,12 @@ function App() {
           ))}
         </select>
         <label htmlFor="model">Model</label>
-        <select id="model">
+        <select
+          id="model"
+          onChange={(e) => setModelValue(e.target.value)}
+          disabled={makeValue === ''}
+          value={modelValue}
+        >
           <option value="">3 | Model</option>
           {ymmeData.modelData.map((model) =>
             model.make === makeValue
@@ -51,7 +57,7 @@ function App() {
           )}
         </select>
         <label htmlFor="engine">Engine</label>
-        <select id="engine">
+        <select id="engine" disabled={modelValue === ''}>
           <option value="">4 | Engine</option>
         </select>
       </form>
