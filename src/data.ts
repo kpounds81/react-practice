@@ -4,7 +4,8 @@ export type CarData = {
 };
 
 export type EngineData = {
-  [key: string]: string[];
+  make: string;
+  engines: string[];
 };
 
 export type YMMEModelData = {
@@ -92,26 +93,32 @@ const ymmeData: YMMEModelData = {
   ],
   engineData: [
     {
-      Acura: ['2.4L DI DOHC I-VTEC 4CYL'],
+      make: 'Acura',
+      engines: ['2.4L DI DOHC I-VTEC 4CYL'],
     },
     {
-      AlfaRomeo: ['1.7L DI TURBO DOHC 4CYL'],
+      make: 'AlfaRomeo',
+      engines: ['1.7L DI TURBO DOHC 4CYL'],
     },
     {
-      Audi: ['2.0L FI TURBO DOHC 4CYL'],
+      make: 'Audi',
+      engines: ['2.0L FI TURBO DOHC 4CYL'],
     },
     {
-      Autocar: [
+      make: 'Autocar',
+      engines: [
         '11.9 NATURAL GAS 6CYL',
         '11.9 TURBO DIESEL 6CYL',
         '8.9L MFI TURBO DSL 6CYL',
       ],
     },
     {
-      'Blue Bird': ['6.7L FI TURBO DIESEL 6CYL'],
+      make: 'Blue Bird',
+      engines: ['6.7L FI TURBO DIESEL 6CYL'],
     },
     {
-      BMW: ['2.0L TWIN TURBO DOHC 4CYL'],
+      make: 'BMW',
+      engines: ['2.0L TWIN TURBO DOHC 4CYL'],
     },
   ],
 };
